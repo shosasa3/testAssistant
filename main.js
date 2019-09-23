@@ -31,6 +31,10 @@ function xmlHttpReq()
 		console.log( "XHR送信成功!!" );
 	}
 
+	xhr.onerror = function() {
+		console.log( "XHR送信失敗.." );
+	}
+
 	xhr.send( null );
 }
 
