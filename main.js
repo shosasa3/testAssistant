@@ -27,7 +27,6 @@ function xmlHttpReq()
 	xhr.open( "GET",location.href + "/getWeather.php?city=" + cityId, true );
 
 	xhr.onload = function(){
-console.log( this.responseText );
 
 		wData = JSON.parse( this.responseText );	// JSON形式データを変換
 		console.log( wData );				//ログで確認
