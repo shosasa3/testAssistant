@@ -95,22 +95,22 @@ phina.define("MyMainScene", {
 			fontColor: '#ffffff',
 			fontSize: 30,
 
-		}).addChildTo( this ).setPosition( this.gridX.center(),800 )
-					.onpointstart = function(){
+		}).addChildTo( this ).setPosition( this.gridX.center(),800 );
 
-					//ボタンがクリックされたら？
-					xmlHttpReq();	//天気json取得
-					self.mainText = self.textToArray( wData.description.text ).replace(/\r?\n/g, '');
-					self.mainText = self.mainText.split(",");
-
-					self.exit("weatherScene",{wData: self.mainText});	//天気シーンに遷移
-
-					};
+		this.wButton.onpointstart = function(){
+		
+			//ボタンがクリックされたら？
+			xmlHttpReq();	//天気json取得
+			self.mainText = self.textToArray( wData.description.text ).replace(/\r?\n/g, '');
+			self.mainText = self.mainText.split(",");
+			self.exit("weatherScene",{wData: self.mainText});	//天気シーンに遷移
+		};
 
 
 		//画面をクリックしたら
 		this.onpointstart = function( e ){
 		};
+
 
 	}, //end init
 
