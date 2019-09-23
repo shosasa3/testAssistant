@@ -100,6 +100,7 @@ phina.define("MyMainScene", {
 		this.wButton.onpointstart = function(){
 		
 			//ボタンがクリックされたら？
+self.text = "OK";
 			xmlHttpReq();	//天気json取得
 			self.mainText = self.textToArray( wData.description.text ).replace(/\r?\n/g, '');
 			self.mainText = self.mainText.split(",");
