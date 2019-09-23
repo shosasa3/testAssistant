@@ -33,6 +33,7 @@ function xmlHttpReq()
 
 	xhr.onerror = function() {
 		console.log( "XHR送信失敗.." );
+		wData = "";
 	}
 
 	xhr.send( null );
