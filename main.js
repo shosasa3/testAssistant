@@ -22,6 +22,8 @@ var xhr = new XMLHttpRequest();
 
 function xmlHttpReq()
 {
+console.log(location.href);
+
 	// 事前にアップしたPHPプログラムを介して、livedoorお天気WebサービスからJSONデータ取得する
 	xhr.open( "GET",location.href + "/getWeather.php?city=" + cityId, true );
 
