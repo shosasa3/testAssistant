@@ -96,7 +96,7 @@ phina.define("MyMainScene", {
 			fontSize: 30,
 
 		}).addChildTo( this ).setPosition( this.gridX.center(),800 )
-					.onpush = function(){
+					.onpointstart = function(){
 
 					//ボタンがクリックされたら？
 					xmlHttpReq();	//天気json取得
