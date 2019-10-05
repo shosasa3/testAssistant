@@ -12,7 +12,7 @@ if ( $_GET['city'] == '' ) {
 
 $work = file_get_contents( "http://weather.livedoor.com/forecast/webservice/json/v1?city={$_GET['city']}" );
 $obj = json_decode( $work );
-$work = json_encode( $obj, JSON_UNESCAPED_UNICODE | 128 );
+$work = json_encode( $obj, JSON_UNESCAPED_UNICODE | 128 );	//‘æ2ˆø”’ˆÓ
 
 print $work;
 ?>
